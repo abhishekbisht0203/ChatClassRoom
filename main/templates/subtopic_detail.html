@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+<div class="container mx-auto my-10">
+    <!-- Subtopic Title -->
+    <div class="mb-8">
+        <a href="javascript:history.back()" class="text-indigo-600 hover:text-indigo-800 transition-colors duration-300 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Go Back
+        </a>
+    </div>
+    
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">{{ subtopic.name }}</h2>
+    <p class="text-gray-600 mb-8">{{ subtopic.description }}</p>
+
+    <!-- Tabs -->
+    <div class="bg-white shadow-md rounded-lg">
+        <ul class="flex border-b">
+            <li class="flex-1">
+                <a href="#notes-tab" class="block p-4 text-center text-gray-700 border-b-2 border-transparent hover:border-indigo-600 hover:text-indigo-600 transition-all duration-300 active-tab" onclick="openTab(event, 'notes')">Notes</a>
+            </li>
+            <li class="flex-1">
+                <a href="#questions-tab" class="block p-4 text-center text-gray-700 border-b-2 border-transparent hover:border-indigo-600 hover:text-indigo-600 transition-all duration-300" onclick="openTab(event, 'questions')">Questions</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div id="notes" class="tab-content p-8">
+            {% for note in subtopic.notes.all %}
+            <a href="{% url 'note_detail' note.id %}" class="text-indigo-600 hover:text-indigo-800 transition-colors duration-300"><h3 class="text-2xl font-semibold text-gray-800 mb-4">{{ note.title }}</h3></a>
+            {% endfor %}
+        </div>
+
+        <div id="questions" class="tab-content p-8 hidden">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Questions</h3>
+            {% for question in subtopic.questions.all %}
+            <div class="mb-6 p-4 bg-gray-100 rounded-lg">
+                <p class="text-gray-700">{{ question.question_text }}</p>
+                <div class="text-right mt-4">
+                    <a href="{% url 'save_question' question.id %}" class="text-indigo-600 hover:underline">Save for Later</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<!-- JavaScript for Tabs -->
+<script>
+function openTab(evt, tabName) {
+    // Hide all tab content
+    var tabcontent = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the active class from all tab links
+    var tablinks = document.querySelectorAll(".active-tab");
+    tablinks.forEach(function(link) {
+        link.classList.remove("border-indigo-600", "text-indigo-600");
+        link.classList.remove("active-tab"); // Remove active class
+    });
+
+    // Show the current tab and add an active class to the clicked tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("border-indigo-600", "text-indigo-600", "active-tab");
+}
+
+// Set the default tab to open
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.tab-content').style.display = 'block';
+    document.querySelector('.tablinks').classList.add('active-tab');
+});
+
+</script>
+
+{% endblock %}

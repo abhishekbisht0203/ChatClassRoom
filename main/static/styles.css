@@ -1,0 +1,414 @@
+.markdown-content code {
+    font-family: 'Source Code Pro', monospace !important; /* Monospaced font for code */
+    background-color: #f0f0f0 !important; /* Light gray background */
+    padding: 0.2rem 0.4rem !important; /* Small padding around code */
+    border-radius: 4px !important; /* Rounded corners */
+    color: #005cc5 !important; /* Brighter custom color for code text */
+    font-size: 0.95rem !important; /* Slightly smaller font size */
+    white-space: pre-wrap !important; /* Wrap code */
+}
+
+.markdown-content pre {
+    background-color: #f7f7f7 !important; /* Lighter background for code blocks */
+    color: #333 !important; /* Darker text color for better readability */
+    padding: 1rem !important; /* Padding around code block */
+    border-radius: 8px !important; /* Rounded corners for code blocks */
+    overflow-x: auto !important; /* Horizontal scroll for long code lines */
+    font-size: 0.95rem !important; /* Slightly smaller font size */
+    line-height: 1.6 !important; /* Increased line height */
+}
+
+.markdown-content pre code {
+    background-color: transparent !important; /* Remove background for inline code inside pre */
+    padding: 0 !important; /* Remove padding */
+    color: inherit !important; /* Inherit color from pre */
+}
+
+td.linenos .normal {
+    color: inherit !important;
+    background-color: transparent !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+span.linenos {
+    color: inherit !important;
+    background-color: transparent !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+td.linenos .special {
+    color: #000000 !important;
+    background-color: #e0e0e0 !important; /* Lighter background for special lines */
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+span.linenos.special {
+    color: #000000 !important;
+    background-color: #e0e0e0 !important; /* Lighter background for special lines */
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.codehilite .hll {
+    background-color: #e0e0e0 !important; /* Light background for highlighted lines */
+}
+.codehilite {
+    background: #f7f7f7 !important; /* Light background for code blocks */
+}
+.codehilite .c {
+    color: #6a8759 !important; /* Softer color for comments */
+    font-style: italic !important;
+} /* Comment */
+.codehilite .err {
+    border: 1px solid #ff0000 !important;
+} /* Error */
+.codehilite .k {
+    color: #d73a49 !important; /* Brighter color for keywords */
+    font-weight: bold !important;
+} /* Keyword */
+.codehilite .o {
+    color: #a626a4 !important; /* Brighter color for operators */
+} /* Operator */
+.codehilite .ch {
+    color: #6a8759 !important;
+    font-style: italic !important;
+} /* Comment.Hashbang */
+.codehilite .cm {
+    color: #6a8759 !important;
+    font-style: italic !important;
+} /* Comment.Multiline */
+.codehilite .cp {
+    color: #e45649 !important;
+} /* Comment.Preproc */
+.codehilite .cpf {
+    color: #6a8759 !important;
+    font-style: italic !important;
+} /* Comment.PreprocFile */
+.codehilite .c1 {
+    color: #6a8759 !important;
+    font-style: italic !important;
+} /* Comment.Single */
+.codehilite .cs {
+    color: #6a8759 !important;
+    font-style: italic !important;
+} /* Comment.Special */
+.codehilite .gd {
+    color: #f00 !important; /* Brighter color for deleted text */
+} /* Generic.Deleted */
+.codehilite .ge {
+    font-style: italic !important;
+} /* Generic.Emph */
+.codehilite .ges {
+    font-weight: bold !important;
+    font-style: italic !important;
+} /* Generic.EmphStrong */
+.codehilite .gr {
+    color: #e06c75 !important; /* Brighter color for errors */
+} /* Generic.Error */
+.codehilite .gh {
+    color: #24292e !important; /* Darker color for headings */
+    font-weight: bold !important;
+} /* Generic.Heading */
+.codehilite .gi {
+    color: #50a14f !important; /* Brighter color for inserted text */
+} /* Generic.Inserted */
+.codehilite .go {
+    color: #717171 !important; /* Neutral color for output */
+} /* Generic.Output */
+.codehilite .gp {
+    color: #24292e !important; /* Darker color for prompt */
+    font-weight: bold !important;
+} /* Generic.Prompt */
+.codehilite .gs {
+    font-weight: bold !important;
+} /* Generic.Strong */
+.codehilite .gu {
+    color: #6f42c1 !important; /* Brighter color for subheadings */
+    font-weight: bold !important;
+} /* Generic.Subheading */
+.codehilite .gt {
+    color: #0366d6 !important; /* Brighter color for tracebacks */
+} /* Generic.Traceback */
+.codehilite .kc {
+    color: #d73a49 !important; /* Brighter color for keyword constants */
+    font-weight: bold !important;
+} /* Keyword.Constant */
+.codehilite .kd {
+    color: #d73a49 !important; /* Brighter color for keyword declarations */
+    font-weight: bold !important;
+} /* Keyword.Declaration */
+.codehilite .kn {
+    color: #d73a49 !important; /* Brighter color for keyword namespaces */
+    font-weight: bold !important;
+} /* Keyword.Namespace */
+.codehilite .kp {
+    color: #d73a49 !important; /* Brighter color for keyword pseudo */
+} /* Keyword.Pseudo */
+.codehilite .kr {
+    color: #d73a49 !important; /* Brighter color for reserved keywords */
+    font-weight: bold !important;
+} /* Keyword.Reserved */
+.codehilite .kt {
+    color: #b04c7f !important; /* Brighter color for keyword types */
+} /* Keyword.Type */
+.codehilite .m {
+    color: #666666 !important; /* Neutral color for numbers */
+} /* Literal.Number */
+.codehilite .s {
+    color: #e45649 !important; /* Brighter color for strings */
+} /* Literal.String */
+.codehilite .na {
+    color: #8e8e8e !important; /* Lighter color for attribute names */
+} /* Name.Attribute */
+.codehilite .nb {
+    color: #d73a49 !important; /* Brighter color for built-in names */
+} /* Name.Builtin */
+.codehilite .nc {
+    color: #0366d6 !important; /* Brighter color for class names */
+    font-weight: bold !important;
+} /* Name.Class */
+.codehilite .no {
+    color: #e45649 !important; /* Brighter color for constants */
+} /* Name.Constant */
+.codehilite .nd {
+    color: #b04c7f !important; /* Brighter color for decorators */
+} /* Name.Decorator */
+.codehilite .ni {
+    color: #717171 !important;
+    font-weight: bold !important;
+} /* Name.Entity */
+.codehilite .ne {
+    color: #cb2431 !important; /* Brighter color for exceptions */
+    font-weight: bold !important;
+} /* Name.Exception */
+.codehilite .nf {
+    color: #0366d6 !important; /* Brighter color for functions */
+} /* Name.Function */
+.codehilite .nl {
+    color: #8e8e8e !important; /* Lighter color for labels */
+} /* Name.Label */
+.codehilite .nn {
+    color: #0366d6 !important; /* Brighter color for namespaces */
+    font-weight: bold !important;
+} /* Name.Namespace */
+.codehilite .nt {
+    color: #d73a49 !important; /* Brighter color for tags */
+    font-weight: bold !important;
+} /* Name.Tag */
+.codehilite .nv {
+    color: #19177c !important; /* Brighter color for variables */
+} /* Name.Variable */
+.codehilite .ow {
+    color: #b04c7f !important; /* Brighter color for operator words */
+    font-weight: bold !important;
+} /* Operator.Word */
+.codehilite .w {
+    color: #bbbbbb !important; /* Lighter color for whitespace */
+} /* Text.Whitespace */
+.codehilite .mb {
+    color: #666666 !important; /* Neutral color for binary numbers */
+} /* Literal.Number.Bin */
+.codehilite .mf {
+    color: #666666 !important; /* Neutral color for float numbers */
+} /* Literal.Number.Float */
+.codehilite .mh {
+    color: #666666 !important; /* Neutral color for hex numbers */
+} /* Literal.Number.Hex */
+.codehilite .mi {
+    color: #666666 !important; /* Neutral color for integers */
+} /* Literal.Number.Integer */
+.codehilite .mo {
+    color: #666666 !important; /* Neutral color for operators */
+} /* Literal.Number.Operator */
+.codehilite .ms {
+    color: #666666 !important; /* Neutral color for scientific numbers */
+} /* Literal.Number.Scientific */
+.codehilite .mv {
+    color: #666666 !important; /* Neutral color for variable numbers */
+} /* Literal.Number.Variable */
+.codehilite .mx {
+    color: #666666 !important; /* Neutral color for escaped numbers */
+} /* Literal.Number.Escaped */
+.codehilite .s1 {
+    color: #e45649 !important; /* Brighter color for single-quoted strings */
+} /* Literal.String.Single */
+.codehilite .s2 {
+    color: #e45649 !important; /* Brighter color for double-quoted strings */
+} /* Literal.String.Double */
+.codehilite .sa {
+    color: #e45649 !important; /* Brighter color for strings with attributes */
+} /* Literal.String.Atr */
+.codehilite .sb {
+    color: #e45649 !important; /* Brighter color for strings with brackets */
+} /* Literal.String.Brac */
+.codehilite .sc {
+    color: #e45649 !important; /* Brighter color for strings with class */
+} /* Literal.String.Class */
+.codehilite .sd {
+    color: #e45649 !important; /* Brighter color for strings with delimiters */
+} /* Literal.String.Delim */
+.codehilite .se {
+    color: #e45649 !important; /* Brighter color for strings with escape sequences */
+} /* Literal.String.Escape */
+.codehilite .sf {
+    color: #e45649 !important; /* Brighter color for strings with formatters */
+} /* Literal.String.Formatter */
+.codehilite .sg {
+    color: #e45649 !important; /* Brighter color for strings with general formatters */
+} /* Literal.String.GenFormat */
+.codehilite .sh {
+    color: #e45649 !important; /* Brighter color for strings with hex */
+} /* Literal.String.Hex */
+.codehilite .si {
+    color: #e45649 !important; /* Brighter color for strings with identifier */
+} /* Literal.String.Identifier */
+.codehilite .sj {
+    color: #e45649 !important; /* Brighter color for strings with json */
+} /* Literal.String.Json */
+.codehilite .sk {
+    color: #e45649 !important; /* Brighter color for strings with keywords */
+} /* Literal.String.Keyword */
+.codehilite .sl {
+    color: #e45649 !important; /* Brighter color for strings with lambda */
+} /* Literal.String.Lambda */
+.codehilite .sm {
+    color: #e45649 !important; /* Brighter color for strings with multiline */
+} /* Literal.String.Multiline */
+.codehilite .sn {
+    color: #e45649 !important; /* Brighter color for strings with name */
+} /* Literal.String.Name */
+.codehilite .so {
+    color: #e45649 !important; /* Brighter color for strings with object */
+} /* Literal.String.Object */
+.codehilite .sp {
+    color: #e45649 !important; /* Brighter color for strings with property */
+} /* Literal.String.Property */
+.codehilite .sr {
+    color: #e45649 !important; /* Brighter color for strings with raw */
+} /* Literal.String.Raw */
+.codehilite .ss {
+    color: #e45649 !important; /* Brighter color for strings with special */
+} /* Literal.String.Special */
+.codehilite .st {
+    color: #e45649 !important; /* Brighter color for strings with type */
+} /* Literal.String.Type */
+.codehilite .su {
+    color: #e45649 !important; /* Brighter color for strings with unicode */
+} /* Literal.String.Unicode */
+.codehilite .sv {
+    color: #e45649 !important; /* Brighter color for strings with variable */
+} /* Literal.String.Variable */
+.codehilite .sx {
+    color: #e45649 !important; /* Brighter color for strings with extra */
+} /* Literal.String.Extra */
+.codehilite .sy {
+    color: #e45649 !important; /* Brighter color for strings with yaml */
+} /* Literal.String.Yaml */
+.codehilite .sz {
+    color: #e45649 !important; /* Brighter color for strings with zero */
+} /* Literal.String.Zero */
+
+.codehilite {
+    background-color: #f5f5f5 !important;
+    border: 3px solid #ddd !important;
+    padding: 10px !important;
+    overflow: auto !important;
+    white-space: pre-wrap !important; /* Line breaks */
+    border-radius: 10px !important; /* Rounded corners */
+    margin: 1rem !important;
+}
+.codehilite pre {
+    margin: 0 !important;
+}
+.codehilite code {
+    display: block !important;
+}
+.markdown-content h1, .markdown-content h2, .markdown-content h3, .markdown-content h4, .markdown-content h5, .markdown-content h6 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.markdown-content p, .markdown-content li {
+    font-family: 'Open Sans', sans-serif !important;
+    line-height: 1.7 !important;
+    margin: 0 0 1rem 0 !important;
+}
+
+.markdown-content ul li::before {
+    content: '\2022' !important;
+    color: #3490dc !important; /* Custom bullet color */
+    font-weight: bold !important;
+    display: inline-block !important;
+    width: 1em !important;
+    margin-left: -1em !important;
+}
+
+/* Differentiate heading sizes */
+.markdown-content h1 {
+    font-size: 2.25rem !important; /* Larger size for h1 */
+    font-weight: 700 !important; /* Bold weight */
+}
+
+.markdown-content h2 {
+    font-size: 1.875rem !important; /* Smaller size for h2 */
+    font-weight: 600 !important; /* Semi-bold weight */
+}
+
+.markdown-content h3 {
+    font-size: 1.5rem !important; /* Smaller size for h3 */
+    font-weight: 500 !important; /* Medium weight */
+}
+
+/* Add spacing around paragraphs */
+.markdown-content p {
+    margin-bottom: 1rem !important;
+    line-height: 1.75 !important; /* Improved readability */
+}
+
+/* Add emphasis to links */
+.markdown-content a {
+    color: #1a73e8 !important; /* Google Blue */
+    text-decoration: none !important; /* No underline */
+    border-bottom: 2px solid #1a73e8 !important; /* Underline-like effect */
+}
+
+.markdown-content a:hover {
+    color: #d93025 !important; /* Hover color */
+    border-bottom: 2px solid #d93025 !important; /* Hover underline effect */
+}
+
+/* List styles */
+.markdown-content ul, .markdown-content ol {
+    margin-left: 1.5rem !important; /* Indent lists */
+    margin-bottom: 1rem !important; /* Space below lists */
+}
+
+.markdown-content li {
+    margin-bottom: 0.5rem !important; /* Space between list items */
+}
+
+/* Blockquote styling */
+.markdown-content blockquote {
+    margin: 1.5rem 0 !important; /* Space around blockquotes */
+    padding: 1rem !important; /* Padding inside blockquotes */
+    border-left: 5px solid #ccc !important; /* Left border for blockquotes */
+    background-color: #f9f9f9 !important; /* Light background */
+    color: #555 !important; /* Darker text color */
+}
+
+/* Table styling */
+.markdown-content table {
+    width: 100% !important; /* Full-width tables */
+    margin-bottom: 1.5rem !important; /* Space below tables */
+    border-collapse: collapse !important; /* Remove gaps between cells */
+}
+
+.markdown-content th, .markdown-content td {
+    padding: 0.75rem !important; /* Padding inside cells */
+    border: 1px solid #ddd !important; /* Light border for cells */
+}
+
+.markdown-content th {
+    background-color: #f1f1f1 !important; /* Light gray background for headers */
+    font-weight: bold !important; /* Bold headers */
+    text-align: left !important; /* Left align headers */
+}

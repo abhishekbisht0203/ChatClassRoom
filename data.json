@@ -1,0 +1,287 @@
+{
+    "subjects": [
+      {
+        "name": "MERN Stack",
+        "description": "Full-stack JavaScript framework using MongoDB, Express.js, React, and Node.js",
+        "topics": [
+          {
+            "name": "MongoDB",
+            "description": "NoSQL database",
+            "subtopics": [
+              {
+                "name": "Introduction to MongoDB",
+                "description": "Basics of MongoDB"
+              },
+              {
+                "name": "CRUD Operations",
+                "description": "Create, Read, Update, Delete operations"
+              }
+            ]
+          },
+          {
+            "name": "Express.js",
+            "description": "Web framework for Node.js",
+            "subtopics": [
+              {
+                "name": "Routing",
+                "description": "Define routes in Express.js"
+              },
+              {
+                "name": "Middleware",
+                "description": "Use of middleware in Express.js"
+              }
+            ]
+          },
+          {
+            "name": "React",
+            "description": "Frontend library for building user interfaces",
+            "subtopics": [
+              {
+                "name": "Components",
+                "description": "Creating and using components in React"
+              },
+              {
+                "name": "State Management",
+                "description": "Managing state in React applications"
+              }
+            ]
+          },
+          {
+            "name": "Node.js",
+            "description": "JavaScript runtime built on Chrome's V8 JavaScript engine",
+            "subtopics": [
+              {
+                "name": "Express Server",
+                "description": "Setting up an Express server"
+              },
+              {
+                "name": "API Development",
+                "description": "Building APIs with Node.js"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Django",
+        "description": "High-level Python Web framework that encourages rapid development and clean, pragmatic design",
+        "topics": [
+          {
+            "name": "Models",
+            "description": "Django models and ORM",
+            "subtopics": [
+              {
+                "name": "Model Definition",
+                "description": "Defining models in Django"
+              },
+              {
+                "name": "Migrations",
+                "description": "Managing database schema changes"
+              }
+            ]
+          },
+          {
+            "name": "Views",
+            "description": "Handling user requests",
+            "subtopics": [
+              {
+                "name": "Function-Based Views",
+                "description": "Using function-based views in Django"
+              },
+              {
+                "name": "Class-Based Views",
+                "description": "Using class-based views in Django"
+              }
+            ]
+          },
+          {
+            "name": "Templates",
+            "description": "Rendering HTML templates",
+            "subtopics": [
+              {
+                "name": "Template Inheritance",
+                "description": "Using template inheritance"
+              },
+              {
+                "name": "Template Tags and Filters",
+                "description": "Using template tags and filters"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Web Design",
+        "description": "Designing and building websites with modern technologies",
+        "topics": [
+          {
+            "name": "HTML",
+            "description": "HyperText Markup Language",
+            "subtopics": [
+              {
+                "name": "HTML Basics",
+                "description": "Introduction to HTML"
+              },
+              {
+                "name": "Forms",
+                "description": "Creating forms in HTML"
+              }
+            ]
+          },
+          {
+            "name": "CSS",
+            "description": "Cascading Style Sheets",
+            "subtopics": [
+              {
+                "name": "CSS Layouts",
+                "description": "Building layouts with CSS"
+              },
+              {
+                "name": "Responsive Design",
+                "description": "Creating responsive designs"
+              }
+            ]
+          },
+          {
+            "name": "JavaScript",
+            "description": "Programming language for the web",
+            "subtopics": [
+              {
+                "name": "DOM Manipulation",
+                "description": "Manipulating the DOM with JavaScript"
+              },
+              {
+                "name": "Event Handling",
+                "description": "Handling events in JavaScript"
+              }
+            ]
+          },
+          {
+            "name": "Tailwind CSS",
+            "description": "Utility-first CSS framework",
+            "subtopics": [
+              {
+                "name": "Utility Classes",
+                "description": "Using utility classes in Tailwind"
+              },
+              {
+                "name": "Customization",
+                "description": "Customizing Tailwind configuration"
+              }
+            ]
+          },
+          {
+            "name": "Flowbite",
+            "description": "UI components for Tailwind CSS",
+            "subtopics": [
+              {
+                "name": "Components Overview",
+                "description": "Overview of Flowbite components"
+              },
+              {
+                "name": "Customization",
+                "description": "Customizing Flowbite components"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Data Science",
+        "description": "Using scientific methods, processes, algorithms, and systems to extract knowledge and insights from data",
+        "topics": [
+          {
+            "name": "Data Preprocessing",
+            "description": "Cleaning and preparing data for analysis",
+            "subtopics": [
+              {
+                "name": "Data Cleaning",
+                "description": "Techniques for cleaning data"
+              },
+              {
+                "name": "Feature Engineering",
+                "description": "Creating features from raw data"
+              }
+            ]
+          },
+          {
+            "name": "Machine Learning",
+            "description": "Building predictive models from data",
+            "subtopics": [
+              {
+                "name": "Supervised Learning",
+                "description": "Building supervised learning models"
+              },
+              {
+                "name": "Unsupervised Learning",
+                "description": "Building unsupervised learning models"
+              }
+            ]
+          },
+          {
+            "name": "Data Visualization",
+            "description": "Visualizing data to extract insights",
+            "subtopics": [
+              {
+                "name": "Visualization Tools",
+                "description": "Using tools like Matplotlib and Seaborn"
+              },
+              {
+                "name": "Interactive Visualizations",
+                "description": "Creating interactive visualizations"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Data Analyst",
+        "description": "Analyzing data to provide actionable insights",
+        "topics": [
+          {
+            "name": "Data Analysis with Excel",
+            "description": "Using Excel for data analysis",
+            "subtopics": [
+              {
+                "name": "Pivot Tables",
+                "description": "Creating and using pivot tables"
+              },
+              {
+                "name": "Advanced Formulas",
+                "description": "Using advanced Excel formulas"
+              }
+            ]
+          },
+          {
+            "name": "SQL",
+            "description": "Querying databases with SQL",
+            "subtopics": [
+              {
+                "name": "Basic Queries",
+                "description": "Writing basic SQL queries"
+              },
+              {
+                "name": "Joins",
+                "description": "Using SQL joins"
+              }
+            ]
+          },
+          {
+            "name": "Data Visualization",
+            "description": "Visualizing data using various tools",
+            "subtopics": [
+              {
+                "name": "Power BI",
+                "description": "Creating dashboards with Power BI"
+              },
+              {
+                "name": "Tableau",
+                "description": "Creating visualizations with Tableau"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

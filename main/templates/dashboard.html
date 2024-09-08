@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}         
+<div class="min-h-screen bg-gray-100 flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center h-16">
+          <div class="flex">
+            <a href="#" class="flex-shrink-0 flex items-center text-2xl font-semibold text-blue-600">
+              My Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex flex-grow overflow-hidden">
+      <!-- Sidebar -->
+      <div class="bg-white w-64 flex-shrink-0 border-r border-gray-200">
+        <div class="h-full flex flex-col p-4">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">User Menu</h2>
+          <nav class="flex-grow">
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200">
+              Dashboard
+            </a>
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-200">
+              My Notes
+            </a>
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-200">
+              My Questions
+            </a>
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-200">
+              Upload Notes
+            </a>
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-200">
+              Upload Questions
+            </a>
+            <a href="#" class="block px-4 py-2 mt-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-200">
+              Settings
+            </a>
+          </nav>
+        </div>
+      </div>
+  
+      <!-- Main Section -->
+      <div class="flex-grow p-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <!-- User Info Section -->
+          <div class="bg-white p-6 rounded-lg shadow flex items-center justify-between">
+            <div class="flex items-center">
+              <img class="h-16 w-16 border-2 border-purple-600 rounded-md " src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed={{ user.username }}" alt="User Avatar">
+              <div class="ml-4">
+                <h2 class="text-2xl font-semibold text-gray-800">Welcome, {{request.user.username}}</h2>
+                <p class="mt-2 text-gray-600">Here is a summary of your recent activity.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <a href="{% url 'logout' %}">Logout</a>
+              <a href="#" class="text-blue-600 hover:underline">Edit Profile</a>
+            </div>
+          </div>
+
+          <!-- User Actions -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-blue-100 p-4 rounded-lg shadow flex items-center justify-between">
+              <div>
+                <h4 class="font-semibold text-lg text-blue-600">Upload Notes</h4>
+                <p class="mt-2 text-gray-600">Share your notes with others.</p>
+              </div>
+              <a href="{% url 'create_note' %}" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Upload</a>
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg shadow flex items-center justify-between">
+              <div>
+                <h4 class="font-semibold text-lg text-green-600">Upload Questions</h4>
+                <p class="mt-2 text-gray-600">Contribute questions for others to solve.</p>
+              </div>
+              <a href="{% url 'create_question' %}" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Upload</a>
+            </div>
+            <div class="bg-purple-100 p-4 rounded-lg shadow flex items-center justify-between">
+              <div>
+                <h4 class="font-semibold text-lg text-purple-600">Manage Settings</h4>
+                <p class="mt-2 text-gray-600">Customize your profile and preferences.</p>
+              </div>
+              <a href="#" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">Settings</a>
+            </div>
+          </div>
+  
+          <!-- Recent Notes -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-800">Recent Notes</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Note Card -->
+              <div class="bg-white p-4 rounded-lg shadow">
+                <h4 class="font-semibold text-lg text-blue-600">Note Title</h4>
+                <p class="mt-2 text-gray-600 truncate">This is a short preview of the note content...</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">Read more</a>
+              </div>
+              <!-- Repeat Note Card for multiple notes -->
+            </div>
+          </div>
+  
+          <!-- Recent Questions -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-800">Recent Questions</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Question Card -->
+              <div class="bg-white p-4 rounded-lg shadow">
+                <h4 class="font-semibold text-lg text-blue-600">Question Title</h4>
+                <p class="mt-2 text-gray-600 truncate">This is a short preview of the question content...</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">View more</a>
+              </div>
+              <!-- Repeat Question Card for multiple questions -->
+            </div>
+          </div>
+
+          <!-- All Notes and Questions Section -->
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-800">Your Notes</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- User Note Card -->
+              <div class="bg-white p-4 rounded-lg shadow">
+                <h4 class="font-semibold text-lg text-blue-600">Your Note Title</h4>
+                <p class="mt-2 text-gray-600 truncate">This is a short preview of your note content...</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">View Note</a>
+              </div>
+              <!-- Repeat User Note Card for multiple notes -->
+            </div>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-800">Your Questions</h3>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- User Question Card -->
+              <div class="bg-white p-4 rounded-lg shadow">
+                <h4 class="font-semibold text-lg text-blue-600">Your Question Title</h4>
+                <p class="mt-2 text-gray-600 truncate">This is a short preview of your question content...</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 hover:underline">View Question</a>
+              </div>
+              <!-- Repeat User Question Card for multiple questions -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
